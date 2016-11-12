@@ -56,6 +56,19 @@ h3 {
     padding: 15px 15px 30px 15px;
 }
 
+.mainbody {
+    text-align: center;
+}
+.kartograph {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.kartograph svg {
+    margin: auto;
+}
+
 #mainbody-intro {
     font-family: Glametrix;
     font-size: 1.9em;

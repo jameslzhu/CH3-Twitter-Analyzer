@@ -3,9 +3,12 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/main.css'/>
+    <link rel='stylesheet' href='/path.css'/>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <script src="/lib/jquery-3.1.1.js"></script>
     <script src="/lib/jquery-ui.js"></script>
+    <script src="/lib/raphael.min.js"></script>
+    <script src="/lib/kartograph.min.js"></script>
     <script src="/code/universalLoader.js"></script>
 </head>
 <body class="background">
@@ -14,6 +17,7 @@
     <div id="mainbody-intro">
         <h2><%= title %></h2>
         <p>Welcome to <%= title %></p>
+        <div id="kartomap1"></div>
     </div>
 </div>
 <footer></footer>

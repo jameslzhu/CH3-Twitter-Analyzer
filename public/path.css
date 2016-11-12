@@ -1,0 +1,10 @@
+path {
+    transform-origin: initial;
+    transition: all .4s ease;
+    z-index: 1;
+}
+
+path:hover {
+    transform: scale(1.3);
+    z-index: 5;
+}
