@@ -1,0 +1,470 @@
+@font-face {
+    font-family: Resamitz;
+    src: url(/fonts/resamitz.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Nikodecs;
+    src: url(/fonts/Nikodecs.otf);
+}
+
+@font-face {
+    font-family: Glametrix;
+    src: url(/fonts/GlametrixLight.otf);
+}
+@font-face {
+    font-family: Glametrix;
+    src: url(/fonts/GlametrixBold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PTMono;
+    src: url(/fonts/PTM55FT.ttf);
+}
+
+@font-face {
+    font-family: Resagokr;
+    src: url(/fonts/Resagokr.otf);
+}
+
+@font-face {
+    font-family: UbuntuCond;
+    src: url(/fonts/Ubuntu-C.ttf);
+}
+
+h1 {
+    font-family: Resamitz;
+    font-size: 3em;
+    margin: 0px;
+    padding: 15px;
+    text-shadow: 0px 0px 8px black;
+}
+
+h2 {
+    font-family: Resamitz;
+    font-size: 1.8em;
+    margin: 0px;
+    padding: 5px;
+}
+
+#tierbody h2 {
+    text-align: right;
+    padding: 10px 50px 10px;
+    background-color: rgba(0,0,0, .5);
+    border-radius: 20px;
+}
+
+h3 {
+    font-family: Resamitz;
+    font-size: 1.3em;
+    margin: 0px;
+    padding: 15px 15px 30px 15px;
+}
+
+#mainbody-intro {
+    font-family: Glametrix;
+    font-size: 1.9em;
+    padding: 10px 20px 10px 20px;
+}
+
+.mainbody-intro-small {
+    font-family: Glametrix;
+    font-size: 70%;
+}
+
+.navbar.flexed {
+    min-height: 20px;
+    flex-shrink: 0;
+}
+
+.navbar li {
+    font-family: Resamitz;
+    font-size: 1em;
+}
+
+p {
+    font-family: Glametrix;
+    font-size: 1.6em;
+    padding: 10px;
+    margin: 0px;
+}
+
+div.decklists {
+    padding: 5px;
+    margin: 10px;
+}
+
+div.deckname {
+    font-family: Resagokr;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+div.cardanims {
+    float: right;
+    background-color: rgba(0, 0, 0, .4);
+    width: 30%;
+    max-width: 320px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 0px 0px 15px;
+    overflow: auto;
+}
+
+div.cardanims .cardanimhold {
+    display: block;
+    text-align:center;
+    width: 100%;
+}
+
+div.cardanimhold img {
+    max-width: 250px;
+    display: inline;
+    margin: 0px auto 0px auto;
+    image-rendering: pixelated;
+}
+
+div.cardanims div.animtypename {
+    font-family: Resamitz;
+    font-size: 1em;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+.cardimage {
+    display: block;
+    width: 316px;
+    height: 386px;
+}
+
+.cardimageSORT {
+    display: inline-block;
+    width: 221px;
+    height: 270px;
+}
+
+.cardSortFormSection {
+    display: inline-block;
+    text-align: left;
+    padding: 0px 7px 0px 7px;
+    vertical-align: text-top;
+    margin: 0px auto 0px auto;
+}
+
+.cardSortFormSection h2 {
+    padding: 2px;
+}
+
+.cardSortFormSection p {
+    padding: 2px;
+}
+
+.navbarSearch {
+    height: 100%;
+    text-align: center;
+    margin: 5px 5px auto 0px;
+}
+
+form#cardsearchForm input {
+    width: 270px;
+    height: 30px;
+    text-align: center;
+    font-family: PTMono, monospace;
+    font-size: 1.0em;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+}
+
+.searchBox {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-family: PTMono, monospace;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+}
+
+.numberBox {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-family: PTMono, monospace;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, .4);
+    color: white;
+}
+
+.genericButton {
+    min-width: 100px;
+    min-height: 30px;
+    text-align: center;
+    font-family: Resamitz;
+    font-size: 0.6em;
+    background-color: #f9f9f9;
+}
+
+.genericButton:hover {
+    background-color: #e5e5e5;
+}
+
+.genericButton:active {
+    background-color: #d5d5d5;
+}
+
+form#cardsearchForm label {
+    font-family: Resamitz;
+    font-size: 1.1em;
+    color: white;
+    display: block;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+
+pre{
+    font-family: PTMono, monospace;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    padding-left: 27px;
+}
+div.mainbody {
+    margin: 20px auto 20px auto;
+    width: 90%;
+    padding: 30px;
+    background-color: rgba(50, 50, 50, .9);
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
+}
+
+a {
+    color: #0090ff;
+    text-decoration: none;
+}
+a:hover {
+    color: #00bbff;
+}
+a:active {
+    color: #55ffff;
+} /*divbody a before */
+
+div.fixedhd {
+    width: 100%;
+    background-color: rgba(50, 50, 50, .7);
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+div.fixedft {
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(50, 50, 50, .7);
+    color: white;
+    text-align: left;
+    margin: 0px;
+    bottom: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+html {
+    min-height: 100%;
+}
+
+.background {
+    background-image: url("/images/bg4.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    font-family: Resamitz;
+}
+
+li {
+    height: 100%;
+    float: left;
+}
+
+
+li a,
+.dropbtn,
+li.standalone,
+.imgbuttontransparentBG{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color .4s ease;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #202020;
+}
+
+li.standalone:hover,
+.imgbuttontransparentBG:hover {
+    cursor: pointer;
+    background-color: #303030;
+}
+li.standalone:active,
+.imgbuttontransparentBG:active {
+    cursor: pointer;
+    background-color: #505050;
+}
+li.standalone.curr {
+    background-color: #404040;
+}
+
+li a:active {
+    background-color: #101010;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    opacity: .5;
+    background-color: #f9f9f9;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    transition: opacity .15s ease-in-out;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.dropdown-content a, .dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover, .dropdown-content div:hover {
+    background-color: #e5e5e5;
+}
+
+.dropdown-content a:active, .dropdown-content div:active {
+    background-color: #d5d5d5;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px 0px;
+}
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium solid white;
+    text-align: center;
+}
+hr:after {
+    font-family: "Times New Roman", serif;
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: transparent;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+}
+
+
+/* Autocomplete
+----------------------------------*/
+.ui-autocomplete { position: static; }
+
+
+.ui-menu {
+    list-style:none;
+    margin: 0;
+    display:block;
+    width:100px;
+}
+.ui-menu .ui-menu {
+}
+.ui-menu .ui-menu-item {
+    text-align: center;
+    margin:0;
+    padding: 5px;
+    width: 100%;
+}
+.ui-menu .ui-menu-item {
+    text-decoration:none;
+    color: black;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+    background-color: #f9f9f9;
+}
+.ui-menu .ui-menu-item:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.ui-menu .ui-menu-item:active {
+    background-color: #d5d5d5;
+    cursor: pointer;
+}
+
+#suggestions {
+    z-index: 30;
+    position: absolute;
+}
+
+.simpleCCflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simpleCCflex.Hidden {
+    visibility: hidden;
+}
