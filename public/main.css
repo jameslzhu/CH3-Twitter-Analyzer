@@ -49,13 +49,6 @@ h2 {
     padding: 5px;
 }
 
-#tierbody h2 {
-    text-align: right;
-    padding: 10px 50px 10px;
-    background-color: rgba(0,0,0, .5);
-    border-radius: 20px;
-}
-
 h3 {
     font-family: Resamitz;
     font-size: 1.3em;
@@ -101,93 +94,14 @@ div.deckname {
     font-size: 1.3em;
     cursor: pointer;
 }
-
-div.cardanims {
-    float: right;
-    background-color: rgba(0, 0, 0, .4);
-    width: 30%;
-    max-width: 320px;
-    padding: 10px 0px 10px 0px;
-    margin: 0px 0px 0px 15px;
-    overflow: auto;
-}
-
-div.cardanims .cardanimhold {
-    display: block;
-    text-align:center;
-    width: 100%;
-}
-
-div.cardanimhold img {
-    max-width: 250px;
-    display: inline;
-    margin: 0px auto 0px auto;
-    image-rendering: pixelated;
-}
-
-div.cardanims div.animtypename {
-    font-family: Resamitz;
-    font-size: 1em;
-    margin: 10px auto 10px auto;
-    text-align: center;
-}
-
-.cardimage {
-    display: block;
-    width: 316px;
-    height: 386px;
-}
-
-.cardimageSORT {
-    display: inline-block;
-    width: 221px;
-    height: 270px;
-}
-
-.cardSortFormSection {
-    display: inline-block;
-    text-align: left;
-    padding: 0px 7px 0px 7px;
-    vertical-align: text-top;
-    margin: 0px auto 0px auto;
-}
-
-.cardSortFormSection h2 {
-    padding: 2px;
-}
-
-.cardSortFormSection p {
-    padding: 2px;
-}
-
 .navbarSearch {
     height: 100%;
     text-align: center;
     margin: 5px 5px auto 0px;
 }
 
-form#cardsearchForm input {
-    width: 270px;
-    height: 30px;
-    text-align: center;
-    font-family: PTMono, monospace;
-    font-size: 1.0em;
-    background-color: rgba(0, 0, 0, .4);
-    color: white;
-}
-
 .searchBox {
     width: 200px;
-    height: 30px;
-    text-align: center;
-    font-family: PTMono, monospace;
-    font-size: 0.8em;
-    background-color: rgba(0, 0, 0, .4);
-    color: white;
-}
-
-.numberBox {
-    width: 50px;
     height: 30px;
     text-align: center;
     font-family: PTMono, monospace;
@@ -211,15 +125,6 @@ form#cardsearchForm input {
 
 .genericButton:active {
     background-color: #d5d5d5;
-}
-
-form#cardsearchForm label {
-    font-family: Resamitz;
-    font-size: 1.1em;
-    color: white;
-    display: block;
-    text-align: center;
-    margin: 0px 0px 10px 0px;
 }
 
 .ui-helper-hidden-accessible {
