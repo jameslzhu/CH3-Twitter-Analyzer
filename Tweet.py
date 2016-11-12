@@ -58,4 +58,4 @@ class listener(StreamListener):
   def on_error(self,status):
     print (status)
 twitterStream = Stream(auth,listener(num_of_tweets))
-twitterStream.filter(track = ["#nikitislame"])
+twitterStream.filter(track = ["#notmypresident"])
