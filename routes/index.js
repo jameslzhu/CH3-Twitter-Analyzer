@@ -14,27 +14,7 @@ var client = twitter({
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Express' });
-
-    client.get('search/tweets.json',
-        {
-            q: '#notmypresident',
-            count: 100,
-            geocode: "37.8716,-122.2727,1000km"
-        },
-        function(error, tweets, response) {
-            fs.writeFile("./tweets.json", JSON.stringify(tweets.statuses), function(err) {
-                if(err) {
-                    return console.log(err);
-                }
-                console.log("The file was saved!");
-            });
-
-            for (var i = 0; i < tweets.statuses.length; i++) {
-                console.log(tweets.statuses[i].text);
-            }
-            console.log(error);
-        }
-    );
 });
+
 
 module.exports = router;

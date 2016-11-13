@@ -81,6 +81,23 @@ $(document).ready(function () {
             }
         });
     });
+
+    $("#submit").click(function(event) {
+        var hashtag = $("input:first").val();
+        console.log(hashtag);
+        // TODO: format request to "/search?hashtag"
+        // send request to server (https://twitterwatson.herokuapp.com/)
+        // receive response, which will be in the following format:
+        // {
+        //   tweets: [
+        //     {
+        //        text: "Donald Trump is blah",
+        //        coordinates: [ 34.2398, -122.293 ]
+        //     }
+        //     ...
+        //   ]  
+        // }
+    })
 });
 
 function onMapLoad() {
@@ -180,6 +197,5 @@ function loadSearch() {
 
      $("#cardsearchForm").on("submit", goToCard);*/
 }
-
 
 //# sourceMappingURL=universalLoader.js.map
