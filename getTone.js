@@ -57,9 +57,9 @@ tA.tone({text: 'Greetings from Watson Developer Cloud!'},
     });*/
 
 function getToneOfText(str, addTo, callback) {
-    tA.tone({text: 'Greetings from Watson Developer Cloud!'},
+    tA.tone({text: str},
         function (err, tone) {
-            if (err)
+            if (err || addTo == null)
                 return;
             else
                 addTo.push(getToneObj(tone));
@@ -69,9 +69,9 @@ function getToneOfText(str, addTo, callback) {
 module.exports.getToneOfText = getToneOfText;
 
 //testing below
-
+/*
 var arr = [];
 
 getToneOfText("Hello, my name is Bob", arr, function() {
     console.log(arr[0]);
-});
+});*/
