@@ -10,7 +10,6 @@ class toneObj {
     constructor(emotDict) {
         this.tones = emotDict;
 }
-
     toString() {
         var toRet = "";
         for (var toneCat in this.tones) {
@@ -26,8 +25,33 @@ class toneObj {
         return toRet
     }
 }
+function consolidateToneObjs(listObjs) {
+    var base = {
+        "Emotion Tone": {
+            "Anger": 0,
+            "Disgust": 0,
+            "Fear": 0,
+            "Joy": 0,
+            "Sadness": 0
+        },
+        "Language Tone": {
+            "Analytical": 0,
+            "Confident": 0,
+            "Tentative": 0
+        },
+        "Social Tone": {
+            "Openness": 0,
+            "Conscientiousness": 0,
+            "Extraversion": 0,
+            "Agreeableness": 0,
+            "Emotional Range": 0
+        }
+    };
+    //TODO
+}
 
 module.exports.toneObj = toneObj;
+module.exports.consolidateTones = consolidateToneObjs;
 
 function getToneObj(emD) {
     var emotDict = {};

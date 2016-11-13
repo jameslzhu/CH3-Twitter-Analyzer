@@ -16,7 +16,7 @@ function getState(jsonDat) {
     }
 }
 
-function appendTweetToDict(lat, long, tweet, dic) {
+function appendTweetToDict(lat, long, tweet, dic, callback) {
     var options = {
         host: 'maps.googleapis.com',
         path: `/maps/api/geocode/json?latlng=${lat},${long}&key=${creds.googleKey}`
@@ -32,9 +32,7 @@ function appendTweetToDict(lat, long, tweet, dic) {
             if (!dic.hasOwnProperty(state)) {
                 dic[state] = [];
             }
-            toner.getToneOfText(tweet, dic[state], function () {
-                console.log(dic["California"])
-            });
+            toner.getToneOfText(tweet, dic[state], callback);
         });
     }).end();
 }

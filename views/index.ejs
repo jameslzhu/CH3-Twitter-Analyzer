@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title>TW Map Display</title>
     <link rel='stylesheet' href='/main.css'/>
     <link rel='stylesheet' href='/path.css'/>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
@@ -9,6 +9,7 @@
     <script src="/lib/jquery-ui.js"></script>
     <script src="/lib/raphael.min.js"></script>
     <script src="/lib/kartograph.min.js"></script>
+    <script src="/lib/chroma.js"></script>
     <script src="/code/universalLoader.js"></script>
 </head>
 <body class="background">
@@ -17,7 +18,33 @@
     <div id="mainbody-intro">
         <h2><%= title %></h2>
         <p>Welcome to <%= title %></p>
-        <div id="kartomap1"></div>
+    </div>
+    <div id="mapbody">
+        <ul class="navbar simpleCCflex" style="background-color: transparent">
+            <li class="standalone curr" id="EmotionToneButton"
+                onclick="showToneMap(event, 'Emotion')">Emotion Tone
+            </li>
+            <li class="standalone" id="LanguageToneButton"
+                onclick="showToneMap(event, 'Language')">Language Tone
+            </li>
+            <li class="standalone" id="SocialToneButton"
+                onclick="showToneMap(event, 'Social')">Social Tone
+            </li>
+        </ul>
+        <div class="spaceArdCenterFlex">
+            <div id="kartomap1"></div>
+            <div id="legend">
+                <div id="legendtitle">Emotion Tone
+                </div>
+                <hr>
+                <div class="legenditems">
+                    <div class="spaceBwCenterFlex">Anger
+                        <div class="block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <footer></footer>

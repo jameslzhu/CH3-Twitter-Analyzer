@@ -80,11 +80,6 @@ h3 {
     font-size: 70%;
 }
 
-.navbar.flexed {
-    min-height: 20px;
-    flex-shrink: 0;
-}
-
 .navbar li {
     font-family: Resamitz;
     font-size: 1em;
@@ -380,6 +375,17 @@ hr:after {
 .simpleCCflex {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.spaceArdCenterFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.spaceBwCenterFlex {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
