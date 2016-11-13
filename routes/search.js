@@ -1,3 +1,4 @@
+var async = require('async');
 var express = require('express');
 var twitter = require('twitter');
 var googlemaps = require('@google/maps')
@@ -21,35 +22,32 @@ var googleMapsClient = googlemaps.createClient({ key: GOOGLE_API_KEY });
 // Respond to GET /search?hashtag
 // Expects the query parameter <hashtag>.
 // Returns 
-router.get('/search', function(req, res, next) {
+router.get("/", function(req, res, next) {
   var hashtag = req.query.hashtag;
   if (!hashtag) {
     res.status(400).send({error: "No query parameter 'hashtag' found."});
   } else {
-    getTweets(hashtag, function(parsedTweets) {
-      res.status(200).send({tweets: parsedTweets});
-    })
+    async.waterfall([
+      function(callback) { fetchTweets(hashtag, numTweets, berkeleyGeocode, callback) },
+      function(tweets, callback) { async.map(tweets.statuses, extractTweetTextLocation, callback) },
+      function(parsedTweets, callback) { res.status(200).send({tweets: parsedTweets} ) }
+    ]);
   }
 });
 
-function getTweets(hashtag, callback) {
-  var parsedTweets = [];
-    var tweets = fetchTweets(hashtag, numTweets, berkeleyGeocode, function(error, tweets, response) {
-      for (var i = 0; i < tweets.statuses.length; i++) {
-        tweet = tweets.statuses[i];
-        extractTweetTextLocation(tweet, function(extractedTweet) {
-          parsedTweets.push(extractedTweet);
-        });
-      };
-    });
-    console.log("All tweets acquired.");
-    return callback(parsedTweets);
+function fetchTweets(hashtag, count, geocode, callback) {
+  return client.get('search/tweets.json', {
+      q: hashtag,
+      count: count,
+      geocode: geocode
+    }, callback);
 }
 
 // Extract the tweet text and geolocation coordinates.
-function extractTweetTextLocation(tweet, callback) {
+function extractTweetTextLocation(err, tweet, callback) {
   // Geocode an address. 
   if (!!tweet.coordinates) {
+    console.log("Found coordinates on tweet.")
     return callback({
       text: tweet.text,
       coordinates: tweet.coordinates.coordinates.reverse()
@@ -58,20 +56,16 @@ function extractTweetTextLocation(tweet, callback) {
     // If the tweet had no coordinates, geocode the human-readable user location.
     googleMapsClient.geocode({ address: tweet.user.location, components: "country:US"}, function(err, response) {
       if (!err) {
-        var location = response.results[0].geometry.location;
+        console.log("No error, gotten address.");
+        var location = response.json.results[0].geometry.location;
         var coords = [location.lat, location.lng];
-        callback({text: tweet.text, coordinates: coords})
+        console.log(coords);
+        callback({text: tweet.text, coordinates: coords});
+      } else {
+        console.log("Google error");
       }
     });
   }
-}
-
-function fetchTweets(hashtag, count, geocode, callback) {
-  return client.get('search/tweets.json', {
-      q: hashtag,
-      count: count,
-      geocode: geocode
-    }, callback);
 }
 
 module.exports = router;
