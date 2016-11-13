@@ -38,7 +38,8 @@ function appendTweetToDict(lat, long, tweet, dic) {
         });
     }).end();
 }
+/*
 var kq = {};
-appendTweetToDict("36.7783", "-119.4179", "Hello, mrRRRRy name is George.", kq);
+appendTweetToDict("36.7783", "-119.4179", "Hello, my name is George.", kq);
 appendTweetToDict("36.7783", "-119.4179", "Hello, today is a nice day.", kq);
-
+*/
